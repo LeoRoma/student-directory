@@ -1,7 +1,7 @@
 def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
-  
+
   students = []
 
   name = gets.chomp
@@ -29,9 +29,12 @@ def print(students)
 end
 
 def print_footer(students)
-  puts "Overall, we have #{students.count} great students"
+  if students.count > 1
+    puts "Overall, we have #{students.count} great students"
+  else
+    puts "Overall, we have #{students.count} great student"
+  end
 end
-
 students = input_students
 
 print_header
