@@ -1,7 +1,7 @@
 def input_students
   puts "Please enter the names of the students"
   puts "To finish, just hit return twice"
-  
+
   students = []
 
   name = gets.chomp
@@ -24,7 +24,7 @@ end
 
 def print(students)
   students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)".center(50)
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
