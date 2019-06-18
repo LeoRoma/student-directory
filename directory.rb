@@ -7,10 +7,10 @@ def input_students
   name = gets.chomp
 
   while !name.empty? do
-
-    students << {name: name, cohort: :november}
+    puts "Please enter the cohort"
+    input = gets.chomp
+    students << {name: name, cohort: input}
     puts "Now we have #{students.count} students"
-
     name = gets.chomp
   end
 
@@ -23,8 +23,12 @@ def print_header
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+puts "Choose the cohort"
+    choose = gets.chomp
+  students.map do |student|
+    if student[:cohort] == choose
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    end
   end
 end
 
