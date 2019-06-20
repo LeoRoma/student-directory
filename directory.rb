@@ -1,3 +1,4 @@
+
 require "csv"
 
 @students = []
@@ -32,13 +33,15 @@ def process(selection)
     puts "--You choose Show the students--\n"
     show_students
   when "3"
-    puts "--You choose to save a file--\n"
+    puts "--Save your file with a name--\n"
     filename = STDIN.gets.chomp
     save_students(filename)
+    puts "\n--You saved your file as #{filename}"
   when "4"
-    puts "--You choose to load a file--\n"
+    puts "--Choose a filename to load--\n"
     filename = STDIN.gets.chomp
     load_students(filename)
+    puts "\n--#{filename} file Loaded--"
   when "9"
     puts "--BYE!--"
     exit
