@@ -4,14 +4,14 @@ def input_students
 
   students = []
 
-  name = gets.chomp
+  name = gets.chop
 
   while !name.empty? do
 
     students << {name: name, cohort: :november}
     puts "Now we have #{students.count} students"
 
-    name = gets.chomp
+    name = gets.chop
   end
 
   students
